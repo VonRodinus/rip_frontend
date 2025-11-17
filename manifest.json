@@ -1,9 +1,6 @@
 
 {
-  "name": "Chronus",
-  "short_name": "Chronus",
-  "start_url": "/rip_frontend/",
-  "scope": "/rip_frontend/",
+  "name": "rip_frontend",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#000000",
