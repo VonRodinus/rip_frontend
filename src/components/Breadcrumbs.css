@@ -1,0 +1,33 @@
+/* src/components/Breadcrumbs.css */
+.breadcrumbs {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 1rem 2rem;           /* ← ОТСТУП СВЕРХУ И СБОКУ */
+    background: white;
+    z-index: 900;
+  }
+  
+  .breadcrumb-item {
+    color: #005760;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .breadcrumb-item:hover {
+    text-decoration: underline;
+    color: #008573;
+  }
+  
+  .breadcrumb-item.active {
+    color: #666;
+    font-weight: 400;
+  }
+  
+  .breadcrumb-separator {
+    color: #999;
+  }

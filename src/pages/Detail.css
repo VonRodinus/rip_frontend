@@ -1,0 +1,43 @@
+/* .white-section { height: 93px; background: #fff; margin-top: 193px; } */
+/* src/pages/Detail.css*/
+.artifact-detail-section { background: #d9d9d9; padding: 60px 0; }
+.artifact-detail-container { 
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; 
+  max-width: 1200px; margin: 0 auto; padding: 0 20px;
+}
+.artifact-image-block { display: flex; justify-content: center; align-items: center; }
+.detail-image { max-width: 100%; max-height: 100%; object-fit: contain; }
+
+.artifact-info-block { display: flex; flex-direction: column; gap: 30px; }
+.artifact-detail-title { font-size: 32px; font-weight: 600; margin: 0; }
+.period-text, .tpq-text { font-size: 20px; margin: 0; }
+
+
+.add-to-request-btn {
+  height: 22px;
+  width: 144px;
+  margin: 0 auto;
+  background: #008573;
+  color: #EFDA00;
+  border: none;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 100;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.add-to-request-btn.disabled {
+  background: #aaa;
+  color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.add-to-request-btn:hover:not(.disabled) {
+  background: #006b5a;
+}
