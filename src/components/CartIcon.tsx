@@ -19,7 +19,7 @@ export const CartIcon = () => {
       {hasRequest ? (
         <a href="#" className="cart-icon-link">
           <img
-            src="http://localhost:9000/artifacts/feather_icon.png"
+            src={`${import.meta.env.BASE_URL}assets/feather_icon.png`}
             alt="Корзина"
             className="cart-icon"
           />
@@ -28,7 +28,7 @@ export const CartIcon = () => {
       ) : (
         <div className="cart-icon-link disabled">
           <img
-            src="http://localhost:9000/artifacts/feather_icon.png"
+            src={`${import.meta.env.BASE_URL}assets/feather_icon.png`}
             alt="Корзина пуста"
             className="cart-icon disabled"
           />

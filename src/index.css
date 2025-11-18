@@ -1,6 +1,11 @@
 /* src/index.css */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/Montserrat-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+}
 
 * {
   box-sizing: border-box;
@@ -18,3 +23,47 @@ a {
   color: inherit;
 }
 
+@media (max-width: 767px) {
+  body { font-size: 14px; } /* Меньше текст на мобильке */
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  body { font-size: 15px; }
+}
+
+/* Планшет */
+@media (max-width: 992px) {
+  .hero-image,
+  .home-hero-image {
+    height: 60vh;
+  }
+}
+
+/* Мобильные */
+@media (max-width: 768px) {
+  .hero-image,
+  .home-hero-image {
+    height: 50vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-image,
+  .home-hero-image {
+    height: 45vh;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-title,
+  .home-hero-title {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title,
+  .home-hero-title {
+    font-size: 2.5rem;
+  }
+}

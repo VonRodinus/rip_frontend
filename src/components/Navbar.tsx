@@ -1,6 +1,6 @@
 // src/components/Navbar.tsx
 import { Link } from 'react-router-dom';
-import { useCart } from '../hooks/useCart';
+//import { useCart } from '../hooks/useCart';
 import './Navbar.css';
 
 export const AppNavbar = () => {
@@ -19,7 +19,7 @@ export const AppNavbar = () => {
         {/* КНОПКА "АРТЕФАКТЫ" — ВПРАВО */}
         <Link to="/catalog" className="artifacts-btn">
           <img
-            src="/assets/vase_669308.png"
+            src={`${import.meta.env.BASE_URL}assets/vase_669308.png`}
             alt=""
             className="artifacts-btn-icon"
           />
@@ -33,7 +33,7 @@ export const AppNavbar = () => {
       {/* КОРЗИНА */}
       <div className="cart-container">
       <div className="cart-icon disabled">
-      <img src="/assets/feather_icon.png" alt="Корзина" className="cart-img disabled" />
+      <img src={`${import.meta.env.BASE_URL}assets/feather_icon.png`} alt="Корзина" className="cart-img disabled" />
       <span className="cart-badge">0</span>
       </div>
       </div>

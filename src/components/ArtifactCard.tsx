@@ -1,3 +1,4 @@
+//src/components/ArtifactCard.tsx
 import { Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { Artifact } from '../types/Artifact';

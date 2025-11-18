@@ -6,7 +6,7 @@ import { Artifact } from '../types/Artifact';
 import { mockArtifacts } from '../services/mockArtifacts'; // <-- импортируем моки
 import './Detail.css';
 
-const DEFAULT_IMAGE = '/assets/default-image.webp';
+const DEFAULT_IMAGE = `${import.meta.env.BASE_URL}assets/default-image.webp`;
 
 export const Detail = () => {
   const { id } = useParams<{ id: string }>();

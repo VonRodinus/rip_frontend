@@ -113,3 +113,48 @@
   cursor: not-allowed;
   pointer-events: none;
 }
+
+@media (max-width: 400px) {
+  .navbar {
+    height: 150px; /* Уменьшаем высоту навигации */
+    padding: 0 1rem; /* Уменьшаем боковые отступы */
+  }
+
+  .logo-text {
+    font-size: 48px; /* Уменьшаем размер логотипа */
+  }
+
+  /* Кнопка "Артефакты" - только иконка */
+  .artifacts-btn {
+    width: 44px; /* Высота остается 44px, ширина равна высоте */
+    height: 44px;
+    right: 15px; /* Чуть ближе к краю */
+  }
+
+  .artifacts-btn-text {
+    display: none; /* Скрываем текст */
+  }
+
+  .artifacts-btn-icon {
+    margin-right: 0; /* Убираем отступ справа */
+  }
+
+  /* Корзина */
+  .cart-container {
+    top: 150px; /* Корректируем позицию относительно новой высоты navbar */
+    right: 1rem; /* Уменьшаем отступ */
+  }
+
+  .cart-img {
+    width: 35px; /* Немного уменьшаем иконку корзины */
+    height: 35px;
+  }
+
+  .cart-badge {
+    top: 6px; /* Корректируем позицию бейджа */
+    right: -3px;
+    width: 18px;
+    height: 18px;
+    font-size: 11px;
+  }
+}

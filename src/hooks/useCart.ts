@@ -9,7 +9,7 @@ export interface Cart {
 export const useCart = () => {
   const [cart, setCart] = useState<Cart>({ id: '', count: 0 });
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [error /*, setError*/] = useState<string | null>(null);
 
   // ЗАКОММЕНТИРОВАНО — НЕТ API
   /*

@@ -4,19 +4,23 @@ import { Link } from 'react-router-dom';
 import { Spinner } from 'react-bootstrap';
 import { ArtifactService } from '../services/ArtifactService';
 import { Artifact } from '../types/Artifact';
-import { useCart } from '../hooks/useCart';
-import { CartService } from '../services/CartService';
-import { mockArtifacts } from '../services/mockArtifacts'; // Импортируем мок
+//import { useCart } from '../hooks/useCart';
+//import { CartService } from '../services/CartService';
+import { mockArtifacts } from '../services/mockArtifacts';
 import './Catalog.css';
+import { useSelector, useDispatch } from 'react-redux';
+import { setArtifactFilter } from '../store/filterSlice';
+import type { RootState } from '../store';
 
-const DEFAULT_IMAGE = '/assets/default-image.webp'; // Путь из public
+const DEFAULT_IMAGE = `${import.meta.env.BASE_URL}assets/default-image.webp`; // Путь из public
 
 export const Catalog = () => {
   const [artifacts, setArtifacts] = useState<Artifact[]>([]);
-  const [filter, setFilter] = useState('');
+  const dispatch = useDispatch();
+  const filter = useSelector((state: RootState) => state.filter.artifactFilter);
   const [loading, setLoading] = useState(true);
   const [isBackendAvailable, setIsBackendAvailable] = useState<boolean | null>(null);
-  const { refresh } = useCart();
+  //const { refresh } = useCart();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -46,14 +50,14 @@ export const Catalog = () => {
     return () => clearTimeout(timer);
   }, [filter]);
 
-  const handleAdd = async (id: string) => {
-    try {
-      await CartService.addArtifact(id);
-      await refresh();
-    } catch (err) {
-      console.error(err);
-    }
-  };
+  // const handleAdd = async (id: string) => {
+  //   try {
+  //     await CartService.addArtifact(id);
+  //     await refresh();
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // };
 
   return (
     <>
@@ -61,7 +65,7 @@ export const Catalog = () => {
       <section className="hero-section">
         <img
           className="hero-image"
-          src="http://localhost:9000/artifacts/artifacts_picture.jpg"
+          src={`${import.meta.env.BASE_URL}assets/artifacts_picture.jpg`}
           alt="Коллекция"
           onError={(e) => {
             e.currentTarget.src = DEFAULT_IMAGE; // fallback на случай недоступности hero-изображения
@@ -75,10 +79,10 @@ export const Catalog = () => {
               className="search-input"
               placeholder="Поиск артефактов..."
               value={filter}
-              onChange={(e) => setFilter(e.target.value)}
+              onChange={(e) => dispatch(setArtifactFilter(e.target.value))}
             />
             <button className="search-icon-btn">
-              <img src="http://localhost:9000/artifacts/search_icon.png" alt="Поиск" className="search-icon" />
+              <img src={`${import.meta.env.BASE_URL}assets/search_icon.png`} alt="Поиск" className="search-icon" />
             </button>
           </div>
         </div>

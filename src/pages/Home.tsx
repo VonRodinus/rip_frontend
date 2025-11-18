@@ -7,7 +7,7 @@ export const Home = () => {
       {/* HERO С ИЗОБРАЖЕНИЕМ */}
       <section className="home-hero">
         <img
-          src="/assets/main_picture.jpg"
+          src={`${import.meta.env.BASE_URL}assets/main_picture.jpg`}
           alt="Chronus"
           className="home-hero-image"
         />

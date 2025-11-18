@@ -2,7 +2,7 @@
 /* src/pages/Detail.css*/
 .artifact-detail-section { background: #d9d9d9; padding: 60px 0; }
 .artifact-detail-container { 
-  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; 
+  display: flex; grid-template-columns: 1fr 1fr; gap: 2rem; 
   max-width: 1200px; margin: 0 auto; padding: 0 20px;
 }
 .artifact-image-block { display: flex; justify-content: center; align-items: center; }
@@ -40,4 +40,14 @@
 
 .add-to-request-btn:hover:not(.disabled) {
   background: #006b5a;
+}
+
+@media (max-width: 767px) {
+  .artifact-detail-container {
+    flex-direction: column; /* В столбик на мобильке */
+  }
+  .detail-image {
+    width: 100%;
+    height: auto;
+  }
 }

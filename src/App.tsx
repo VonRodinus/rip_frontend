@@ -1,5 +1,5 @@
 // src/App.tsx
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import { AppNavbar } from './components/Navbar'; // ← ИСПРАВЛЕНО
 import { Catalog } from './pages/Catalog';
 import { Detail } from './pages/Detail';
@@ -8,7 +8,7 @@ import { Breadcrumbs } from './components/Breadcrumbs';
 
 export default function App() {
   return (
-    <Router>
+    <Router basename="">
       <AppNavbar />
       <Breadcrumbs />
       <Routes>
