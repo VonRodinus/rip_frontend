@@ -39,12 +39,13 @@ export default defineConfig({
       },
 
       devOptions: {
-        enabled: true,  // PWA работает даже в dev (npm run dev)
+        enabled: false,  // PWA работает даже в dev (npm run dev)
       },
     }),
   ],
 
   server: {
+    host: "127.0.0.1",
     port: 3000,
     open: true,
     proxy: {
