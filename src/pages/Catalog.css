@@ -255,7 +255,7 @@
   color: #EFDA00;
 }
 
-/* АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ */
+
 @media (max-width: 1023px) {
   .artifacts-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -271,7 +271,7 @@
     min-width: auto;
   }
   
-  /* Исправляем hero секцию для мобильных */
+  
   .hero-section {
     height: 150px;
   }
@@ -283,14 +283,14 @@
   }
 }
 
-/* АДАПТИВНОСТЬ ПОИСКА - ИСПРАВЛЕННАЯ */
+
 @media (max-width: 768px) {
   .search-container {
     width: 90%;
     max-width: 300px;
-    height: 40px; /* Увеличиваем высоту для удобства на мобильных */
-    flex-direction: row; /* Оставляем горизонтальное направление */
-    background: rgba(217, 217, 217, 0.7); /* Немного увеличиваем прозрачность */
+    height: 40px; 
+    flex-direction: row; 
+    background: rgba(217, 217, 217, 0.7); 
   }
   
   .search-input {
@@ -302,7 +302,7 @@
   .search-icon-btn {
     width: 40px;
     height: 40px;
-    flex-shrink: 0; /* Запрещаем уменьшение кнопки */
+    flex-shrink: 0; 
   }
 }
 

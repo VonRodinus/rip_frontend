@@ -44,7 +44,7 @@
 
 @media (max-width: 767px) {
   .artifact-detail-container {
-    flex-direction: column; /* В столбик на мобильке */
+    flex-direction: column;
   }
   .detail-image {
     width: 100%;

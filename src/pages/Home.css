@@ -60,15 +60,15 @@
   text-align: justify;
 }
 
-/* АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ */
+
 @media (max-width: 767px) {
   .home-hero {
-    height: 400px; /* Уменьшаем высоту hero секции */
+    height: 400px; 
   }
   
   .home-hero-overlay {
-    left: 30px; /* Уменьшаем отступ слева */
-    bottom: 120px; /* Корректируем позицию снизу */
+    left: 30px; 
+    bottom: 120px; 
   }
   
   .home-hero-title {
@@ -83,37 +83,37 @@
 
 @media (max-width: 480px) {
   .home-hero {
-    height: 300px; /* Еще меньше высота для маленьких экранов */
+    height: 300px; 
   }
   
   .home-hero-overlay {
-    left: 20px; /* Еще меньше отступ слева */
-    bottom: 80px; /* Поднимаем текст выше */
-    right: 20px; /* Добавляем отступ справа */
-    text-align: left; /* Выравнивание по левому краю */
+    left: 20px; 
+    bottom: 80px; 
+    right: 20px;
+    text-align: left; 
   }
   
   .home-hero-title {
-    font-size: 1.5rem; /* Еще меньше размер шрифта */
+    font-size: 1.5rem;
     line-height: 1.2;
-    word-wrap: break-word; /* Перенос длинных слов */
+    word-wrap: break-word; 
   }
   
   .home-description {
-    height: auto; /* Автоматическая высота */
-    min-height: 200px; /* Минимальная высота */
+    height: auto; 
+    min-height: 200px; 
     margin-top: 20px;
     padding: 1rem;
   }
   
   .home-description-text {
     font-size: 0.9rem;
-    text-align: left; /* Меняем выравнивание на левое для мобильных */
+    text-align: left; 
     line-height: 1.5;
   }
 }
 
-/* Для очень маленьких экранов */
+
 @media (max-width: 320px) {
   .home-hero-title {
     font-size: 1.3rem;
