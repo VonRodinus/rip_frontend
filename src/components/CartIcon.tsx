@@ -7,9 +7,7 @@ export const CartIcon = () => {
   const [hasRequest, setHasRequest] = useState(false);
 
   useEffect(() => {
-    // Mock: имитируем получение данных
-    // Позже заменишь на fetch('/api/current_request')
-    const mockCount = 2; // или 0
+    const mockCount = 2;
     setCount(mockCount);
     setHasRequest(mockCount > 0);
   }, []);

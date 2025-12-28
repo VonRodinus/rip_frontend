@@ -8,9 +8,9 @@ export default defineConfig({
 
     VitePWA({
       registerType: 'autoUpdate',         
-      injectRegister: 'auto',               
+      injectRegister: null,               
 
-      // Кэширование — оставил как у вас, но добавил includeAssets для ваших ассетов
+      
       includeAssets: [
         'favicon.ico', 
         'logo192.png', 
@@ -18,7 +18,7 @@ export default defineConfig({
         'assets/*.png', 
         'assets/*.jpg', 
         'assets/*.webp', 
-        'assets/*.ttf'  // ← Добавь для шрифта FretQwikC.ttf
+        'assets/*.ttf'
       ],
       
       workbox: {
@@ -31,7 +31,7 @@ export default defineConfig({
               cacheName: 'api-cache',
               expiration: {
                 maxEntries: 50,
-                maxAgeSeconds: 30 * 24 * 60 * 60,  // 30 дней
+                maxAgeSeconds: 30 * 24 * 60 * 60,  
               },
             },
           },
@@ -39,7 +39,7 @@ export default defineConfig({
       },
 
       devOptions: {
-        enabled: false,  // PWA работает даже в dev (npm run dev)
+        enabled: false, 
       },
     }),
   ],

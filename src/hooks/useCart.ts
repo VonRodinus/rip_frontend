@@ -11,7 +11,7 @@ export const useCart = () => {
   const [loading, setLoading] = useState(false);
   const [error /*, setError*/] = useState<string | null>(null);
 
-  // ЗАКОММЕНТИРОВАНО — НЕТ API
+  
   /*
   const refresh = useCallback(async () => {
     setLoading(true);
@@ -34,14 +34,14 @@ export const useCart = () => {
   }, [refresh]);
   */
 
-  // ЗАГЛУШКА: корзина всегда 0
+  
   useEffect(() => {
     setCart({ id: '', count: 0 });
     setLoading(false);
   }, []);
 
   const refresh = useCallback(() => {
-    // Ничего не делаем
+    
   }, []);
 
   return { cart, loading, error, refresh };

@@ -15,7 +15,7 @@
 .home-hero-overlay {
   position: absolute;
   left: 60px;
-  bottom: 173px; /* 193px навбар + 3px отступ */
+  bottom: 173px;
   z-index: 10;
 }
 

@@ -4,7 +4,7 @@ import './Home.css';
 export const Home = () => {
   return (
     <>
-      {/* HERO С ИЗОБРАЖЕНИЕМ */}
+      
       <section className="home-hero">
         <img
           src={`${import.meta.env.BASE_URL}assets/main_picture.jpg`}
@@ -18,7 +18,6 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* БЕЛЫЙ БЛОК ОПИСАНИЯ */}
       <section className="home-description">
         <div className="home-description-inner">
           <p className="home-description-text">

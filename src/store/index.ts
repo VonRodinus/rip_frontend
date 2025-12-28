@@ -6,7 +6,7 @@ export const store = configureStore({
   reducer: {
     filter: filterReducer,
   },
-  devTools: true, // Для Redux DevTools
+  devTools: true, 
 });
 
 export type RootState = ReturnType<typeof store.getState>;

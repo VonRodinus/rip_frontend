@@ -18,7 +18,7 @@ export const Detail = () => {
   useEffect(() => {
     setLoading(true);
 
-    // 1. Сначала пытаемся взять с бэкенда
+    
     ArtifactService.getById(id!)
       .then((data) => {
         setArtifact(data);
@@ -27,18 +27,18 @@ export const Detail = () => {
       .catch((err) => {
         console.warn('Backend unavailable or artifact not found. Trying mock...', err);
 
-        // 2. Ищем в моках
+        
         const mockArtifact = mockArtifacts.find(a => a.ID === id);
 
         if (mockArtifact) {
-          // Подставляем дефолтную картинку
+          
           setArtifact({
             ...mockArtifact,
             ImageURL: mockArtifact.ImageURL || DEFAULT_IMAGE,
           });
           setIsBackendAvailable(false);
         } else {
-          // Если и в моках нет — 404
+          
           setArtifact(null);
         }
       })
@@ -47,7 +47,7 @@ export const Detail = () => {
       });
   }, [id]);
 
-  // Если артефакт не найден вообще
+  
   if (!loading && !artifact) {
     return (
       <div className="text-center my-5">
@@ -71,7 +71,7 @@ export const Detail = () => {
 
   return (
     <>
-      {/* Уведомление о демо-режиме */}
+      
       {isBackendAvailable === false && (
         <div className="alert alert-warning text-center mx-4" role="alert">
           Демонстрационный режим: данные загружены из локальной коллекции.

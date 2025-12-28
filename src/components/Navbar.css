@@ -4,13 +4,13 @@
     height: 193px;
     display: flex;
     align-items: center;
-    justify-content: center;     /* ← ГАРАНТИЯ ЦЕНТРА */
+    justify-content: center;   
     padding: 0 2rem;
     position: relative;
     z-index: 1000;
   }
   
-  /* ЛОГОТИП — АБСОЛЮТНО ПО ЦЕНТРУ */
+ 
   .navbar-content {
     position: absolute;
     left: 50%;
@@ -34,10 +34,10 @@
     line-height: 1;
   }
   
-  /* КНОПКА "АРТЕФАКТЫ" — ЧУТЬ ЛЕВЕЕ ЦЕНТРА */
+
   .artifacts-btn {
     position: absolute;
-    right: 30px;                 /* ← СДВИГ ВЛЕВО ОТ КРАЯ */
+    right: 30px;             
     display: flex;
     align-items: center;
     justify-content: center;
@@ -68,14 +68,14 @@
     font-weight: 500;
   }
   
-  /* БЕЛАЯ ПОЛОСА */
+ 
   .navbar-spacer {
     height: 15px;
     background: white;
     position: relative;
   }
   
-  /* КОРЗИНА */
+ 
   .cart-container {
     position: absolute;
     top: 193px;
@@ -116,42 +116,42 @@
 
 @media (max-width: 400px) {
   .navbar {
-    height: 150px; /* Уменьшаем высоту навигации */
-    padding: 0 1rem; /* Уменьшаем боковые отступы */
+    height: 150px; 
+    padding: 0 1rem;
   }
 
   .logo-text {
-    font-size: 48px; /* Уменьшаем размер логотипа */
+    font-size: 48px; 
   }
 
-  /* Кнопка "Артефакты" - только иконка */
+
   .artifacts-btn {
-    width: 44px; /* Высота остается 44px, ширина равна высоте */
+    width: 44px; 
     height: 44px;
-    right: 15px; /* Чуть ближе к краю */
+    right: 15px; 
   }
 
   .artifacts-btn-text {
-    display: none; /* Скрываем текст */
+    display: none;
   }
 
   .artifacts-btn-icon {
-    margin-right: 0; /* Убираем отступ справа */
+    margin-right: 0;
   }
 
-  /* Корзина */
+  
   .cart-container {
-    top: 150px; /* Корректируем позицию относительно новой высоты navbar */
-    right: 1rem; /* Уменьшаем отступ */
+    top: 150px; 
+    right: 1rem; 
   }
 
   .cart-img {
-    width: 35px; /* Немного уменьшаем иконку корзины */
+    width: 35px; 
     height: 35px;
   }
 
   .cart-badge {
-    top: 6px; /* Корректируем позицию бейджа */
+    top: 6px; 
     right: -3px;
     width: 18px;
     height: 18px;

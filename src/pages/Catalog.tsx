@@ -12,7 +12,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { setArtifactFilter } from '../store/filterSlice';
 import type { RootState } from '../store';
 
-const DEFAULT_IMAGE = `${import.meta.env.BASE_URL}assets/default-image.webp`; // Путь из public
+const DEFAULT_IMAGE = `${import.meta.env.BASE_URL}assets/default-image.webp`; 
 
 export const Catalog = () => {
   const [artifacts, setArtifacts] = useState<Artifact[]>([]);
@@ -61,7 +61,7 @@ export const Catalog = () => {
 
   return (
     <>
-      {/* HERO */}
+      
       <section className="hero-section">
         <img
           className="hero-image"
@@ -95,7 +95,7 @@ export const Catalog = () => {
         </p>
       </section>
 
-      {/* Опционально: уведомление о режиме */}
+      
       {isBackendAvailable === false && (
         <div className="alert alert-warning text-center mx-4" role="alert">
           Сервер недоступен. Отображается демонстрационная коллекция.
